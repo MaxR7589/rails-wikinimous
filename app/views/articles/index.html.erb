@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-8">
+      <h2>Create your own fake article!</h1>
+    </div>
+    <div class="col-xs-6 col-md-4 head-button">
+      <%= link_to "Add a new article", new_article_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+  <div class="row">
+    <% @articles.each do |article| %>
+      <h2><%= link_to "#{article.title}", article_path(article) %></h2>
+      <blockquote>
+        <p><%= "#{article.content}" %></p>
+      </blockquote>
+    <% end %>
+  </div>
+</div>
+

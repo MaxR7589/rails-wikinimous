@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="col-xs-8-offset-2">
+      <h1><%= @article.title  %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to "Edit", edit_article_path, class: "btn btn-warning" %>
+    </div>
+    <br>
+    <br>
+    <div class="col-x6-12">
+        <%= link_to "Delete", article_path,
+          method: :delete,
+          data: { confirm: "Are you sure?" },
+          class: "btn btn-danger" %>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <p><%= @article.content %></p>
+    <br>
+    <p><%= link_to "To home", articles_path, class: "btn btn-primary" %></p>
+  </div>
+</div>

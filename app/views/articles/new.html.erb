@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>New fake article!<em><%= @article.title %></em></h1>
+  <%= form_for(@article) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+    <br>
+    <%= f.label :content %>
+    <%= f.text_area :content, class: "form-control" %>
+    <br>
+    <%= f.submit :Submit, class: "btn btn-warning" %>
+  <% end %>
+  <br>
+  <p><%= link_to "To home", articles_path, class: "btn btn-primary" %></p>
+</div>
